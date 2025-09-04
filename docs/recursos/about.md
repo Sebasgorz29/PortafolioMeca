@@ -7,7 +7,6 @@ Correo: 204486@iberopuebla.mx
 Número: +522215290319
 
 <img src="../recursos/imgs/Sebas.jpg" alt="Diagrama del sistema" width="420">
-```
 
 ## Mis intereses
 Algunos de mis intereses son acerca de los deportes, computacion, construcción y/o reparación de aparatos electrónicos, instrumentos musicales, tomar fotografias, surfeo, ski, t y los videojuegos.
@@ -17,6 +16,5 @@ Unos de mis logros son 3er lugar en las Olimpiadas nacionales de mexico como Pue
 
 ### Universidad Iberoamericana
 <img src="../recursos/imgs/ibero.jpeg" alt="Diagrama del sistema" width="420">
-```
 
 [Pagina de la Universidad.](https://www.iberopuebla.mx/)
