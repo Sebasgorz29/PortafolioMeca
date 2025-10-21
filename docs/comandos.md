@@ -1,251 +1,96 @@
-# Encabezados
-
-``` codigo
-# Título H1
-## Título H2
-### Título H3
-```
-
-# Título H1
-## Título H2
-### Título H3
-
----
-
-# Énfasis y código en línea
-
-``` codigo
-**negritas**, *cursivas*, ~~tachado~~, `código en línea`
-```
-
-**negritas**, *cursivas*, ~~tachado~~, `código en línea`
-
----
-
-# Citas (blockquote)
-
-``` codigo
-> Esta es una cita destacada.
-> Puede tener múltiples líneas.
-```
-
-> Esta es una cita destacada.
-> Puede tener múltiples líneas.
-
----
-
-# Enlaces
-
-``` codigo
-[Enlace directo](https://www.iberopuebla.mx/)
-
-[Texto del enlace de referencia][doc-ref]
-
-[doc-ref]: https://www.iberopuebla.mx//docs "Título opcional"
-```
-
-[Enlace directo](https://www.iberopuebla.mx/)
-
-[Texto del enlace de referencia][doc-ref]
-
-[doc-ref]: https://www.iberopuebla.mx//docs "Título opcional"
-
----
-
-# Listas: viñetas, numeradas y de tareas
-
-``` codigo
-
-- Item A
-    * Subitem A.1
-    * Subitem A.2
-- Item B
-    - Subitem B.1
-    - Subitem B.2
-
-1.  Paso 1
-    1.  Paso 1.1
-    2.  Paso 1.2
-        1.  Paso 1.2.1
-        2.  Paso 1.2.2
-        
-- [x] Hecho
-- [ ] Pendiente
-
-```
-
-- Item A
-    * Subitem A.1
-    * Subitem A.2
-- Item B
-    - Subitem B.1
-    - Subitem B.2
-
----
-
-1.  Paso 1
-    1.  Paso 1.1
-    2.  Paso 1.2
-        1.  Paso 1.2.1
-        2.  Paso 1.2.2
-        
-- [x] Hecho
-- [ ] Pendiente
-
----
-
-# Tablas
-
-``` codigo
-| Componente | Cant. | Nota        |
-|-----------:|:-----:|-------------|
-| Sensor X   | 2     | I2C         |
-| MCU Y      | 1     | WiFi/BLE    |
-```
-
-| Componente | Cant. | Nota        |
-|-----------:|:-----:|-------------|
-| Sensor X   | 2     | I2C         |
-| MCU Y      | 1     | WiFi/BLE    |
-
----
-
-# Imágenes
-
-``` codigo
-![Diagrama del sistema](recursos/imgs/ibero.jpeg)
-
-<!-- Control de tamaño usando HTML (cuando se requiera) -->
-<img src="../recursos/imgs/ibero.jpeg" alt="Diagrama del sistema" width="420">
-```
-
-![Diagrama del sistema](recursos/imgs/ibero.jpeg)
-
-<img src="../recursos/imgs/ibero.jpeg" alt="Diagrama del sistema" width="420">
-
----
-
-# PDFs (enlace y embebido)
-
-``` codigo
-[Descargar especificación (PDF)](recursos/archivos/Calendario.pdf)
-
-<!-- Embed (requiere navegador compatible) -->
-<object data="recursos/archivos/Calendario.pdf" type="application/pdf" width="100%" height="600">
-  <p>No se pudo mostrar el PDF. <a href="../recursos/archivos/Calendario.pdf">Descargar</a></p>
-</object>
-```
-
-[Descargar especificación (PDF)](recursos/archivos/Calendario.pdf)
-
-<object data="../recursos/archivos/Calendario.pdf" type="application/pdf" width="100%" height="600">
-  <p>No se pudo mostrar el PDF. <a href="../recursos/archivos/Calendario.pdf">Descargar</a></p>
-</object>
-
----
-
-# Admonitions (Material)
-
-``` codigo
-!!! note "Nota"
-    Esto es una nota informativa.
-
-!!! tip "Sugerencia"
-    Un consejo breve para el usuario.
-
-!!! warning "Advertencia"
-    Precauciones o riesgos a considerar.
-
-??? info "Más información (colapsable)"
-    Contenido adicional que se puede expandir.
-```
-
-!!! note "Nota"
-    Esto es una nota informativa.
-
-!!! tip "Sugerencia"
-    Un consejo breve para el usuario.
-
-!!! warning "Advertencia"
-    Precauciones o riesgos a considerar.
-
-??? info "Más información (colapsable)"
-    Contenido adicional que se puede expandir.
-
----
-
-# Código con resaltado
-
-``` codigo
-```python
-def medir(canal: int) -> dict:
-    # Simulación de lectura
-    return {"canal": canal, "valor": 523, "unidad": "mV"}
-
-print(medir(1))
-```
-```
-
-```python
-def medir(canal: int) -> dict:
-    # Simulación de lectura
-    return {"canal": canal, "valor": 523, "unidad": "mV"}
-
-print(medir(1))
-```
-
----
-
-# Separador horizontal
-
-``` codigo
----
-```
-
----
-
----
-
-# Listas anidadas con código y notas
-
-``` codigo
-- **Módulo A**
-  - Función: `procesar()`
-  - Entrada:
-    - `signal` (float)
-    - `freq` (Hz)
-  - Salida:
-    - JSON con `valor`, `unidad`
-  - !!! note
-        Documenta rangos válidos y casos borde.
-```
-
-- **Módulo A**
-  - Función: `procesar()`
-  - Entrada:
-    - `signal` (float)
-    - `freq` (Hz)
-  - Salida:
-    - JSON con `valor`, `unidad`
-  - !!! note
-        Documenta rangos válidos y casos borde.
-
----
-
-# Bloques de cita con código (pseudo-logs)
-
-``` codigo
-> **Log:**
-> ```
-> [12:00:00] Init OK
-> [12:00:01] Conectando a I2C...
-> [12:00:02] Lectura: 523 mV
-> ```
-```
-
-> **Log:**
-> ```
-> [12:00:00] Init OK
-> [12:00:01] Conectando a I2C...
-> [12:00:02] Lectura: 523 mV
-> ```
+# 🚗 Vehículo Controlado por Bluetooth con Motores DC
+
+## 🎯 Propósito
+Este proyecto consistió en el diseño y construcción de un vehículo a control remoto, utilizando motores de corriente directa (DC), un puente H para el control de dirección, y un microcontrolador ESP32 para la comunicación vía Bluetooth.  
+El objetivo principal fue aplicar conocimientos básicos de electrónica, mecánica y programación para competir en una dinámica de robótica.
+
+## 🧭 Metas del Proyecto
+**Meta General:**  
+Desarrollar un prototipo funcional de un coche a control remoto que pueda participar en una competencia de robótica, demostrando habilidades de diseño, integración de sistemas y trabajo en equipo.
+
+**Metas Específicas:**
+- Implementar un sistema de control que permita maniobrar el vehículo con precisión y velocidad.  
+- Diseñar una pala frontal que facilite la interacción con objetos (como pelotas) durante la competencia.  
+- Optimizar el rendimiento del coche para lograr una ventaja competitiva en el juego.
+
+## 📐 Alcance del Proyecto
+El proyecto abarcó desde la conceptualización del diseño hasta la implementación completa del sistema electrónico y mecánico.  
+Se trabajó con materiales accesibles y se estableció un límite de dos semanas para su desarrollo.
+
+Incluye:
+- Diseño estructural del vehículo  
+- Integración de componentes electrónicos  
+- Programación del sistema de control  
+- Pruebas funcionales previas a la competencia
+
+## 🔄 Proceso del Trabajo
+
+### 👥 Organización del Equipo
+El equipo se dividió en dos áreas principales:
+- Desarrollo del código de programación
+- Desarrollo electrónico
+- Diseño
+
+Mientras algunos miembros se encargaron de la estructura del coche, otros se enfocaron en la programación y conexiones.
+
+### 🧰 Materiales Utilizados
+- 2 motores DC  
+- Puente H  
+- ESP32  
+- Protoboard  
+- Jumpers  
+- LED  
+- Batería de 9V  
+- MDF para la base  
+- PLA para impresión 3D de la pala frontal
+
+### 🧪 Tecnologías Utilizadas
+- **Lenguajes:** Python, C++  
+- **Hardware:** ESP32, Arduino  
+- **Software:** SolidWorks, PSeInt  
+- **Otros:** CircuitVerse
+
+### ⚡ Sistema Electrónico
+- Se conectaron los motores al puente H, asegurando una correcta polaridad y conexión a tierra.  
+- Los pines IN1 a IN4 se configuraron para controlar la dirección de giro de los motores.  
+- La ESP32 se integró como unidad de control, con especial atención a la asignación de pines y la protección contra cortocircuitos.
+
+## 🧠 Programación
+Se desarrolló un programa en Arduino IDE que permite controlar el coche mediante una aplicación Bluetooth.
+
+Funciones principales:
+- Avanzar  
+- Retroceder  
+- Girar a la izquierda/derecha  
+- Detenerse  
+- Ajustar velocidad mediante PWM  
+
+La lógica de movimiento se basó en la manipulación de los motores: por ejemplo, para girar, se detiene una rueda mientras la otra sigue girando.  
+El código para controlar el coche se encuentra al final del artículo.
+
+## 📈 Resultados y Observaciones
+Antes de la competencia, el coche mostró un buen desempeño:
+- Respondía a los comandos  
+- La pala funcionaba correctamente  
+- El diseño era estable  
+
+Durante el evento surgieron algunos inconvenientes:
+- Uno de los motores se desprendió tras un choque con una silla  
+- El control Bluetooth presentaba cierto retraso en la respuesta  
+- Los movimientos eran algo bruscos, lo que dificultaba la precisión  
+
+A pesar de estos detalles, el coche cumplió con los objetivos técnicos del proyecto.
+
+## 🧩 Reflexiones Finales
+El proyecto fue una excelente oportunidad para aplicar conocimientos teóricos en un entorno práctico.  
+Se logró integrar electrónica, mecánica y programación en un sistema funcional.
+
+Áreas de mejora identificadas:
+- Realizar más pruebas antes de la competencia  
+- Mejorar el montaje de los motores  
+- Optimizar el control desde la app  
+
+Esta experiencia reforzó la importancia de la planificación, el trabajo colaborativo y la iteración constante para lograr un producto funcional y competitivo.
+
+## 📹 Evidencias
+[Evidencias en video aquí.]()
