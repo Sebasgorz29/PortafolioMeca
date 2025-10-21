@@ -1,97 +1,70 @@
-# 🚀 Comandos básicos de Git (primeros pasos)
+# 📶 Comunicación Bluetooth entre ESP32 y Celular
 
-En este curso solo usaremos los comandos esenciales de Git para trabajar con repositorios.
+## 🎯 Propósito
+Establecer una comunicación inalámbrica entre un ESP32 y un teléfono celular mediante Bluetooth, para enviar mensajes desde la app de Arduino y visualizar los textos recibidos en el monitor serial de la computadora.
 
----
+## 🧭 Meta de la práctica
+Lograr que el ESP32 reciba mensajes escritos desde una app móvil y los muestre en el monitor serial de la computadora a través de una conexión Bluetooth.
 
-## 1. Clonar un repositorio
+### 👥 Organización del Equipo
+La organización fue eficaz: el equipo se dividió en dos áreas principales:
+- Desarrollo del código de programación
+- Desarrollo electrónico
 
-Copia un proyecto de GitHub a tu computadora.
+### 🧰 Materiales Utilizados
 
-```bash
-git clone https://github.com/usuario/repositorio.git
-```
+- ESP32  
+- Protoboard  
+- Cables de conexión (jumpers)  
+- Cable USB para cargar el programa  
+- Aplicación *Arduino Bluetooth Controller* (en celular Android)  
+- Computadora con Arduino IDE  
 
----
+#### 🧪 Tecnologías Utilizadas
 
-## 2. Verificar cambios
+- **Lenguajes:** Python  
+- **Hardware:** ESP32, Arduino  
+- **Software:** Arduino IDE  
+- **Sistema Electrónico:** Comunicación Bluetooth sin sensores ni actuadores externos
 
-Muestra qué archivos has modificado o agregado.
+### 🧠 Función del ESP32
+El ESP32 se conectó a la computadora mediante USB. No se utilizaron sensores ni actuadores, ya que el enfoque fue exclusivamente en la comunicación Bluetooth. Se configuró como servidor Bluetooth para que el celular pudiera detectarlo y conectarse.
 
-```bash
-git status
-```
+## 📡 Programación
 
----
+Este proyecto permite establecer una comunicación inalámbrica entre un ESP32 y un teléfono celular mediante Bluetooth. El objetivo es recibir mensajes escritos desde una app móvil y mostrarlos en el monitor serial de la computadora.
 
-## 3. Preparar cambios
+### 🔧 Flujo del código
 
-Agrega archivos para guardarlos en el próximo commit.
+1. **Librería Bluetooth**
+   - Se incluye `BluetoothSerial.h` para habilitar la comunicación Bluetooth.
+   - Se crea el objeto `SerialBT` para manejar la conexión.
 
-```bash
-git add archivo.txt
-git add .   # agrega todos los archivos modificados
-```
+2. **Configuración inicial (`setup()`)**
+   - Se inicia la comunicación serial con `Serial.begin(115200)`.
+   - Se activa el Bluetooth con `SerialBT.begin("ESP32AÑ")`.
+   - Se imprime un mensaje indicando que el Bluetooth está listo.
 
----
+3. **Ciclo principal (`loop()`)**
+   - Se verifica si hay datos disponibles con `SerialBT.available()`.
+   - Si se detecta un mensaje:
+     - Se lee con `SerialBT.readString()`.
+     - Se muestra en el monitor serial con `Serial.println()`.
+   - Se incluye un retraso de 1 segundo (`delay(1000)`) para evitar sobrecarga.
 
-## 4. Guardar cambios (commit)
+### 📲 Aplicación
 
-Guarda tus cambios con un mensaje descriptivo.
+Este código convierte al ESP32 en un receptor Bluetooth que recibe texto desde un celular y lo muestra en tiempo real en la computadora. Es útil para proyectos de:
+- Comunicación inalámbrica
+- Monitoreo de datos
+- Control remoto básico
 
-```bash
-git commit -m "Descripción breve de los cambios"
-```
+## 📈 Resultados y Observaciones
 
----
+- La conexión Bluetooth fue exitosa y estable.  
+-  Los mensajes enviados desde el celular se reflejaron correctamente en el monitor serial.  
+-  El ESP32 respondió de forma inmediata.  
+- No se presentaron errores de transmisión ni desconexiones durante la prueba.
 
-## 5. Subir cambios al repositorio (push)
-
-Envía tus commits locales al repositorio en GitHub.
-
-```bash
-git push origin main
-```
-
----
-
-## 6. Traer cambios del remoto (pull)
-
-Actualiza tu proyecto con los últimos cambios de GitHub.
-
-```bash
-git pull origin main
-```
-
----
-## Flujo típico de trabajo
-
-![Diagrama de flujo de Git](recursos/imgs/git_diagram.png)
-
-1. **Traer cambios del remoto**  
-   ```bash
-   git pull origin main
-   ```
-
-2. **Editar** tus archivos de proyecto.
-
-3. **Preparar los cambios**  
-   ```bash
-   git add .
-   ```
-
-4. **Guardar los cambios**  
-   ```bash
-   git commit -m "Mensaje descriptivo"
-   ```
-
-5. **Enviar los cambios al remoto**  
-   ```bash
-   git push origin main
-   ```
-
----
-
-!!! tip "Consejo"
-    Piensa en este ciclo como un **loop infinito**:  
-    cada vez que quieras contribuir → primero `pull`, después `add` + `commit`, y finalmente `push`.
+## 📹 Evidencias
+[Evidencias en video aquí.]()
