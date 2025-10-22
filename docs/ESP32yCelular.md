@@ -66,5 +66,24 @@ Este código convierte al ESP32 en un receptor Bluetooth que recibe texto desde 
 -  El ESP32 respondió de forma inmediata.  
 - No se presentaron errores de transmisión ni desconexiones durante la prueba.
 
+### Codigo
+```cpp
+#include "BluetoothSerial.h"   
+
+BluetoothSerial SerialBT;      
+void setup() {
+  Serial.begin(115200);       
+  SerialBT.begin("ESP32AÑ");   
+  Serial.println("Bluetooth listo. Esperando conexión...");
+}
+
+void loop() {
+  if (SerialBT.available()) {                
+    String mensaje = SerialBT.readString();  
+    Serial.println("Recibido: " + mensaje);  
+  delay(1000);  
+}
+```
+
 ## 📹 Evidencias
-[Evidencias en video aquí.]()
+[Evidencias en video aquí.](https://youtube.com/shorts/FjRERy2lNNs?si=2Luq59n9TTcmMw0b)

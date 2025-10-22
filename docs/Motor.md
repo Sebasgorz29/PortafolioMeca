@@ -47,5 +47,116 @@ Esta práctica permitió comprender tres aspectos fundamentales del control de m
 Se reforzó el uso de PWM en diferentes resoluciones y frecuencias, y se evidenció cómo la programación puede traducirse en movimientos físicos precisos.  
 Además, se aprendió a mapear valores para controlar servos, y se observó la importancia de los retardos (`delay`) para estabilizar los cambios.
 
+### Codigo Direccion Basica
+```cpp
+/*Control de 1 solo motor*/
+#define in1 27
+#define in2 14
+
+void setup() {
+  /*Declarar Pines Como salida*/
+  pinMode(in1, OUTPUT);
+  pinMode(in2, OUTPUT);
+}
+
+void loop() {
+  /*ADELANTE*/
+  digitalWrite(in1, 0);
+  digitalWrite(in2, 1);
+  delay(1000);
+  /*ALTO*/
+  digitalWrite(in1, 0);
+  digitalWrite(in2, 0);
+  delay(1000);
+  /*ATRAS*/
+  digitalWrite(in1, 1);
+  digitalWrite(in2, 0);
+  delay(1000);
+  /*ALTO*/
+  digitalWrite(in1, 0);
+  digitalWrite(in2, 0);
+  delay(1000);
+}
+```
+### Codigo Control de velocidad
+```cpp
+/*Control de 1 solo motor*/
+#define in1 27
+#define in2 14
+
+void setup() {
+  /*Declarar Pines Como salida*/
+  pinMode(in1, OUTPUT);
+  pinMode(in2, OUTPUT);
+}
+
+void loop() {
+  /*ADELANTE*/
+  digitalWrite(in1, 0);
+  digitalWrite(in2, 1);
+  delay(1000);
+  /*ALTO*/
+  digitalWrite(in1, 0);
+  digitalWrite(in2, 0);
+  delay(1000);
+  /*ATRAS*/
+  digitalWrite(in1, 1);
+  digitalWrite(in2, 0);
+  delay(1000);
+  /*ALTO*/
+  digitalWrite(in1, 0);
+  digitalWrite(in2, 0);
+  delay(1000);
+}
+```
+### Codigo Control de Servo
+```cpp
+/*Control de 1 solo motor*/
+#define pwm 12 //Definicion de pin de Velocidad
+int duty = 0;
+int grados = 0;
+void setup() {
+  /*Declarar Pines Como salida*/
+  pinMode(in1, OUTPUT);
+  pinMode(in2, OUTPUT);
+  /*Configuracion de pin PWM 
+    - Se conecta al pin 12(pwm)
+    - Frecuencia de 50hz
+    - Resolucion de 12 bit (0-4096)
+    - Canal 0
+  */
+  ledcAttachChannel(pwm, 50, 12, 0);
+  Serial.begin(115200);
+}
+
+void loop() { 
+  /*
+  Servo trabaja del ~5% al ~10% del total
+  ~5% - 0°
+  ~10% - 180°
+  5% de 4096 = 204.8
+  10% de 4096 = 409.6
+  */
+  grados=0;
+  duty= map(grados, 0, 180, 205, 410);
+  Serial.print("Pos: ");
+  Serial.println(duty);
+  ledcWrite(pwm, duty);
+  delay(1000);
+  grados=90;
+  duty= map(grados, 0, 180, 205, 410);
+  Serial.print("Pos: ");
+  Serial.println(duty);
+  ledcWrite(pwm, duty);
+  delay(1000);
+  grados=180;
+  duty= map(grados, 0, 180, 205, 410);
+  Serial.print("Pos: ");
+  Serial.println(duty);
+  ledcWrite(pwm, duty);
+  delay(1000);
+}
+```
+
 ## 📹 Evidencias
-[Evidencias en video aquí.]()
+[Evidencias en video aquí.](https://youtu.be/1Hk5i1rHxTI?si=jaIY8B7tFWqqFv5h)

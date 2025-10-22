@@ -48,5 +48,27 @@ Puesto que se logró entender cómo interactúan los componentes electrónicos b
 Se aprendió la importancia de las resistencias pull-down para evitar lecturas erráticas, y se reforzó el concepto de entradas y salidas digitales.  
 Además, se comprobó que incluso con un circuito sencillo se pueden lograr interacciones útiles entre hardware y software.
 
+### Codigo
+```cpp
+const int led=27;
+const int button=32;
+
+void setup() {
+  Serial.begin(115200); //INICIO LA COMUNICACION EN 115200 char por segundo
+  pinMode(led,OUTPUT);
+  pinMode(button,INPUT);
+}
+
+void loop() {
+  int estado = digitalRead(button);
+  if(estado == 1){
+    digitalWrite(led,1);
+  }
+  else{
+    digitalWrite(led,0);
+  }
+}
+```
+
 ## 📹 Evidencias
-[Evidencias en video aquí.]()
+[Evidencias en video aquí.](https://m.youtube.com/watch?v=IkfE9FZbQ9E)

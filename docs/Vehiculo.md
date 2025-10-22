@@ -92,5 +92,110 @@ Se logró integrar electrónica, mecánica y programación en un sistema funcion
 
 Esta experiencia reforzó la importancia de la planificación, el trabajo colaborativo y la iteración constante para lograr un producto funcional y competitivo.
 
+### Codigo para controlar el coche
+```cpp
+#include "BluetoothSerial.h"
+
+BluetoothSerial SerialBT;
+
+// Pines del puente H
+const int IN1 = 12; // Motor izquierdo
+const int IN2 = 11;
+const int ENA = 13;
+const int IN3 = 10; // Motor derecho
+const int IN4 = 9;
+const int ENB = 7;
+
+int valSpeed = 255;
+
+void setup() {
+  Serial.begin(115200);
+  SerialBT.begin("CarroESP32"); // Nombre del dispositivo Bluetooth
+
+  pinMode(IN1, OUTPUT);
+  pinMode(IN2, OUTPUT);
+  pinMode(ENA, OUTPUT);
+  pinMode(IN3, OUTPUT);
+  pinMode(IN4, OUTPUT);
+  pinMode(ENB, OUTPUT);
+
+  stopMotors();
+}
+
+void loop() {
+  if (SerialBT.available()) {
+    char command = SerialBT.read();
+    Serial.println(command);
+
+    switch (command) {
+      case 'F': forward(); break;
+      case 'B': backward(); break;
+      case 'L': turnLeft(); break;
+      case 'R': turnRight(); break;
+      case 'S': stopMotors(); break;
+      case '0': setSpeed(0); break;
+      case '1': setSpeed(25); break;
+      case '2': setSpeed(50); break;
+      case '3': setSpeed(75); break;
+      case '4': setSpeed(100); break;
+      case '5': setSpeed(125); break;
+      case '6': setSpeed(150); break;
+      case '7': setSpeed(175); break;
+      case '8': setSpeed(200); break;
+      case '9': setSpeed(255); break;
+    }
+  }
+}
+
+void forward() {
+  analogWrite(ENA, valSpeed);
+  analogWrite(ENB, valSpeed);
+  digitalWrite(IN1, HIGH);
+  digitalWrite(IN2, LOW);
+  digitalWrite(IN3, HIGH);
+  digitalWrite(IN4, LOW);
+}
+
+void backward() {
+  analogWrite(ENA, valSpeed);
+  analogWrite(ENB, valSpeed);
+  digitalWrite(IN1, LOW);
+  digitalWrite(IN2, HIGH);
+  digitalWrite(IN3, LOW);
+  digitalWrite(IN4, HIGH);
+}
+
+void turnLeft() {
+  analogWrite(ENA, valSpeed / 2);
+  analogWrite(ENB, valSpeed);
+  digitalWrite(IN1, HIGH);
+  digitalWrite(IN2, LOW);
+  digitalWrite(IN3, HIGH);
+  digitalWrite(IN4, LOW);
+}
+
+void turnRight() {
+  analogWrite(ENA, valSpeed);
+  analogWrite(ENB, valSpeed / 2);
+  digitalWrite(IN1, HIGH);
+  digitalWrite(IN2, LOW);
+  digitalWrite(IN3, HIGH);
+  digitalWrite(IN4, LOW);
+}
+
+void stopMotors() {
+  analogWrite(ENA, 0);
+  analogWrite(ENB, 0);
+  digitalWrite(IN1, LOW);
+  digitalWrite(IN2, LOW);
+  digitalWrite(IN3, LOW);
+  digitalWrite(IN4, LOW);
+}
+
+void setSpeed(int val) {
+  valSpeed = val;
+}
+```
+
 ## 📹 Evidencias
-[Evidencias en video aquí.]()
+[Evidencias en video aquí.](https://youtube.com/shorts/-BoEvhaO5zg?si=5fucGFWHJO4fObPG)

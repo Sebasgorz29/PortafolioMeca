@@ -1,6 +1,6 @@
 # 🚀 Proyectos con ESP32 y Arduino
 
-Bienvenido a este repositorio de prácticas técnicas con microcontroladores. Aquí encontrarás documentación clara, código funcional y evidencias de proyectos realizados con ESP32 y Arduino. Cada práctica explora conceptos clave de electrónica, programación y control físico.
+Bienvenidos a todos en este grupo de prácticas técnicas con microcontroladores. Aquí encontrarás documentación clara, código funcional y evidencias de proyectos realizados con ESP32 y Arduino. Cada práctica explora conceptos clave de electrónica, programación y control físico.
 
 ---
 
