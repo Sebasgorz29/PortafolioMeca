@@ -1,4 +1,4 @@
-#  KiCad
+#  🛠️KiCad
 ## Tabla de Contenidos
 1. Flujo de Trabajo General
 2. Fase 1: Captura Esquemática - Eeschema
