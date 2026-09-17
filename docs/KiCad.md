@@ -1,12 +1,37 @@
-#  🛠️KiCad
+#  🛠️ KiCad
+
+---
+
+## Autores del Proyecto
+
+- **Sebastian Gomez Rodriguez**
+  <img src="recursos/foto_sebastian.jpg" alt="Foto Sebastian Gomez Rodriguez" width="200" />
+
+- **Erik Andre Zepeda Tapia**
+  <img src="recursos/foto_erik.jpg" alt="Foto Erik Andre Zepeda Tapia" width="200" />
+
+---
+
+## Evidencia y Fotografías de la Placa
+
+- **Vista de la Placa PCB**
+  <img src="recursos/pcb.jpg" alt="Vista PCB" width="400" />
+
+- **Circuito Ensamblado**
+  <img src="recursos/pcb_ensamblada.jpg" alt="Circuito Ensamblado" width="400" />
+
+---
+
 ## Tabla de Contenidos
-1. Flujo de Trabajo General
-2. Fase 1: Captura Esquemática - Eeschema
-3. Fase 2: Verificación Eléctrica y Asignación de Huellas
-4. Fase 3: Diseño Físico de la PCB - PCB Editor
-5. Fase 4: Ruteo y Planos de Cobre
-6. Fase 5: DRC y Exportación de Archivos de Fabricación - Gerber
-7. Puntos Ciegos y Lista de Chequeo Anti-Errores
+1. Autores del Proyecto
+2. Evidencia y Fotografías de la Placa
+3. Flujo de Trabajo General
+4. Fase 1: Captura Esquemática - Eeschema
+5. Fase 2: Verificación Eléctrica y Asignación de Huellas
+6. Fase 3: Diseño Físico de la PCB - PCB Editor
+7. Fase 4: Ruteo y Planos de Cobre
+8. Fase 5: DRC y Exportación de Archivos de Fabricación - Gerber
+9. Puntos Ciegos y Lista de Chequeo Anti-Errores
 
 ---
 
@@ -122,3 +147,4 @@ Check DRC > Vista 3D > Exportar Gerber / Drill .zip
    - Haz clic en Generate Drill Files... para exportar los taladros en formato Excel / NC Drill.
    - Comprime todos los archivos .gbr y .drl generados en un único archivo .zip.
 
+---
