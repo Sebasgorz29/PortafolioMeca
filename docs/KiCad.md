@@ -4,11 +4,24 @@
 
 ## Autores del Proyecto
 
-- **Sebastian Gomez Rodriguez**
-  <img src="recursos/foto_sebastian.jpg" alt="Foto Sebastian Gomez Rodriguez" width="200" />
-
-- **Erik Andre Zepeda Tapia**
-  <img src="recursos/foto_erik.jpg" alt="Foto Erik Andre Zepeda Tapia" width="200" />
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="recursos/imgs/Sebas.jpg" alt="Sebastian Gomez Rodriguez" width="160" height="160" style="object-fit: cover; border-radius: 10px;" />
+      <br />
+      <b>Sebastian Gomez Rodriguez</b>
+      <br />
+      204486
+    </td>
+    <td align="center" width="50%">
+      <img src="recursos/imgs/erik.jpg" alt="Erik Andre Zepeda Tapia" width="160" height="160" style="object-fit: cover; border-radius: 10px;" />
+      <br />
+      <b>Erik Andre Zepeda Tapia</b>
+      <br />
+      204440
+    </td>
+  </tr>
+</table>
 
 ---
 
