@@ -9,7 +9,7 @@ nav:
   - Control de Giro, Velocidad y Posición con ESP32: Motor.md
   - Vehículo Controlado por Bluetooth con Motores DC: Vehiculo.md
   - Balansa: balansa/index.md
-  
+
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
