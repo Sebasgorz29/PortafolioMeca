@@ -1,4 +1,15 @@
-site_name: Bitacora de Sebastiám Gómez Rodríguez
+site_name: Bitacora de Sebastián Gómez Rodríguez
+nav:
+  - Recursos:
+      - Quien soy?: recursos/about.md
+  - Proyectos con ESP32 y Arduino: index.md
+  - Comunicación Bluetooth entre ESP32 y Celular: ESP32yCelular.md
+  - Encendido del LED con Pulsador usando Arduino: EncendidodeLED.md
+  - KiCad: KiCad.md
+  - Control de Giro, Velocidad y Posición con ESP32: Motor.md
+  - Vehículo Controlado por Bluetooth con Motores DC: Vehiculo.md
+  - Balansa:
+      - balansa/index.md
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
