@@ -9,8 +9,11 @@ nav:
   - KiCad: KiCad.md
   - Control de Giro, Velocidad y Posición con ESP32: Motor.md
   - Vehículo Controlado por Bluetooth con Motores DC: Vehiculo.md
-  - Balansa:
-      - Proyecto Balanza: balansa/index.md
+  - Balanza:
+      - Balanza Stewart: balanza/BalzaStewart.md
+      - Calibración C: balanza/CalibracionC.md
+      - Calibración P: balanza/CalibracionP.md
+      - OpenCV: balanza/Opencv.md
 
 markdown_extensions:
   - pymdownx.highlight:
