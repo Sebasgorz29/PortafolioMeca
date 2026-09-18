@@ -1,8 +1,7 @@
 site_name: Bitacora de Sebastián Gómez Rodríguez
 
 nav:
-  - Recursos:
-  - Quien soy?: recursos/about.md
+  - Quien soy?: about.md
   - Proyectos con ESP32 y Arduino: index.md
   - Comunicación Bluetooth entre ESP32 y Celular: ESP32yCelular.md
   - Encendido del LED con Pulsador usando Arduino: EncendidodeLED.md
