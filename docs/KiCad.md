@@ -4,18 +4,16 @@
 
 ## Autores del Proyecto
 
-<table>
+<table width="100%">
   <tr>
-    <td align="center" width="50%">
-      <img src="../recursos/imgs/Sebas.jpg" alt="Sebastian Gomez Rodriguez" width="160" height="160" style="object-fit: cover; border-radius: 10px;" />
-      <br />
+    <td align="center" valign="top" width="50%">
+      <img src="../recursos/imgs/Sebas.jpg" alt="Sebastian Gomez Rodriguez" width="150" height="150" style="width: 150px !important; height: 150px !important; max-width: 150px !important; object-fit: cover; border-radius: 12px; display: block; margin: 0 auto 10px auto;" />
       <b>Sebastian Gomez Rodriguez</b>
       <br />
       204486
     </td>
-    <td align="center" width="50%">
-      <img src="../recursos/imgs/erik.jpg" alt="Erik Andre Zepeda Tapia" width="160" height="160" style="object-fit: cover; border-radius: 10px;" />
-      <br />
+    <td align="center" valign="top" width="50%">
+      <img src="../recursos/imgs/erik.jpg" alt="Erik Andre Zepeda Tapia" width="150" height="150" style="width: 150px !important; height: 150px !important; max-width: 150px !important; object-fit: cover; border-radius: 12px; display: block; margin: 0 auto 10px auto;" />
       <b>Erik Andre Zepeda Tapia</b>
       <br />
       204440
