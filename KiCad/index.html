@@ -1,0 +1,1110 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../EncendidodeLED/">
+      
+      
+        <link rel="next" href="../Motor/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>KiCad - Bitacora de Sebastián Gómez Rodríguez</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.2/css/all.css">
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#kicad" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Bitacora de Sebastián Gómez Rodríguez" class="md-header__button md-logo" aria-label="Bitacora de Sebastián Gómez Rodríguez" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Bitacora de Sebastián Gómez Rodríguez
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              KiCad
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Bitacora de Sebastián Gómez Rodríguez" class="md-nav__button md-logo" aria-label="Bitacora de Sebastián Gómez Rodríguez" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Bitacora de Sebastián Gómez Rodríguez
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Quien soy?
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyectos con ESP32 y Arduino
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ESP32yCelular/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Comunicación Bluetooth entre ESP32 y Celular
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EncendidodeLED/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Encendido del LED con Pulsador usando Arduino
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    KiCad
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    KiCad
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#autores-del-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Autores del Proyecto
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evidencia-y-fotografias-de-la-placa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evidencia y Fotografías de la Placa
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tabla-de-contenidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tabla de Contenidos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flujo-de-trabajo-general" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flujo de Trabajo General
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fase-1-captura-esquematica-eeschema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase 1: Captura Esquemática - Eeschema
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fase-2-verificacion-electrica-y-asignacion-de-huellas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase 2: Verificación Eléctrica y Asignación de Huellas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fase-3-diseno-fisico-de-la-pcb-pcb-editor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase 3: Diseño Físico de la PCB - PCB Editor
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fase-4-ruteo-y-planos-de-cobre" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase 4: Ruteo y Planos de Cobre
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fase-5-drc-y-exportacion-de-archivos-de-fabricacion-gerber" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase 5: DRC y Exportación de Archivos de Fabricación - Gerber
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Motor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Control de Giro, Velocidad y Posición con ESP32
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Vehiculo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vehículo Controlado por Bluetooth con Motores DC
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Balanza
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Balanza
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../balanza/BalzaStewart/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Balanza Stewart
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../balanza/CalibracionC/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Calibración C
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../balanza/CalibracionP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Calibración P
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../balanza/Opencv/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OpenCV
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#autores-del-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Autores del Proyecto
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#evidencia-y-fotografias-de-la-placa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evidencia y Fotografías de la Placa
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tabla-de-contenidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tabla de Contenidos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flujo-de-trabajo-general" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flujo de Trabajo General
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fase-1-captura-esquematica-eeschema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase 1: Captura Esquemática - Eeschema
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fase-2-verificacion-electrica-y-asignacion-de-huellas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase 2: Verificación Eléctrica y Asignación de Huellas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fase-3-diseno-fisico-de-la-pcb-pcb-editor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase 3: Diseño Físico de la PCB - PCB Editor
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fase-4-ruteo-y-planos-de-cobre" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase 4: Ruteo y Planos de Cobre
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fase-5-drc-y-exportacion-de-archivos-de-fabricacion-gerber" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase 5: DRC y Exportación de Archivos de Fabricación - Gerber
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="kicad">🛠️ KiCad</h1>
+<hr />
+<h2 id="autores-del-proyecto">Autores del Proyecto</h2>
+<table width="100%">
+  <tr>
+    <td align="center" valign="top" width="50%">
+      <img src="../recursos/imgs/Sebas.jpg" alt="Sebastian Gomez Rodriguez" width="150" height="150" style="width: 150px !important; height: 150px !important; max-width: 150px !important; object-fit: cover; border-radius: 12px; display: block; margin: 0 auto 10px auto;" />
+      <b>Sebastian Gomez Rodriguez</b>
+      <br />
+      204486
+    </td>
+    <td align="center" valign="top" width="50%">
+      <img src="../recursos/imgs/erik.jpg" alt="Erik Andre Zepeda Tapia" width="150" height="150" style="width: 150px !important; height: 150px !important; max-width: 150px !important; object-fit: cover; border-radius: 12px; display: block; margin: 0 auto 10px auto;" />
+      <b>Erik Andre Zepeda Tapia</b>
+      <br />
+      204440
+    </td>
+  </tr>
+</table>
+
+<hr />
+<h2 id="evidencia-y-fotografias-de-la-placa">Evidencia y Fotografías de la Placa</h2>
+<ul>
+<li>
+<p><strong>Vista de la Placa PCB</strong>
+  <img src="recursos/pcb.jpg" alt="Vista PCB" width="400" /></p>
+</li>
+<li>
+<p><strong>Circuito Ensamblado</strong>
+  <img src="recursos/pcb_ensamblada.jpg" alt="Circuito Ensamblado" width="400" /></p>
+</li>
+</ul>
+<hr />
+<h2 id="tabla-de-contenidos">Tabla de Contenidos</h2>
+<ol>
+<li>Autores del Proyecto</li>
+<li>Evidencia y Fotografías de la Placa</li>
+<li>Flujo de Trabajo General</li>
+<li>Fase 1: Captura Esquemática - Eeschema</li>
+<li>Fase 2: Verificación Eléctrica y Asignación de Huellas</li>
+<li>Fase 3: Diseño Físico de la PCB - PCB Editor</li>
+<li>Fase 4: Ruteo y Planos de Cobre</li>
+<li>Fase 5: DRC y Exportación de Archivos de Fabricación - Gerber</li>
+<li>Puntos Ciegos y Lista de Chequeo Anti-Errores</li>
+</ol>
+<hr />
+<h2 id="flujo-de-trabajo-general">Flujo de Trabajo General</h2>
+<p>Esquemático Eeschema &gt; Check ERC &gt; Asignación de Footprints
+         |
+PCB Layout PCB Editor &gt; Definir Edge.Cuts &gt; Ruteo + Plano GND
+         |
+Check DRC &gt; Vista 3D &gt; Exportar Gerber / Drill .zip</p>
+<hr />
+<h2 id="fase-1-captura-esquematica-eeschema">Fase 1: Captura Esquemática - Eeschema</h2>
+<ol>
+<li><strong>Creación del Proyecto:</strong></li>
+<li>Abre KiCad &gt; File &gt; New Project.</li>
+<li>
+<p>Guarda el proyecto en un directorio dedicado. Ejemplo: mi_proyecto_pcb/</p>
+</li>
+<li>
+<p><strong>Inserción de Componentes:</strong></p>
+</li>
+<li>Abre la librería de símbolos.</li>
+<li>
+<p>Busca componentes pasivos R, C, LED e integrados ATmega328P, ESP32, LM7805, etc.</p>
+</li>
+<li>
+<p><strong>Cableado Eléctrico:</strong></p>
+</li>
+<li>Conecta los pines de los componentes usando la herramienta de cableado.</li>
+<li>
+<p>Usa Net Labels para señales repetitivas o largas como TX, RX, SDA, SCL para mantener el esquemático limpio y legible.</p>
+</li>
+<li>
+<p><strong>Desacoplo de Alimentación:</strong></p>
+</li>
+<li>Coloca condensadores de desacoplo de 100 nF en paralelo entre VCC/VDD y GND, lo más cerca posible de cada pin de alimentación de los integrados.</li>
+<li>Añade símbolos de alimentación GND y VCC.</li>
+</ol>
+<hr />
+<h2 id="fase-2-verificacion-electrica-y-asignacion-de-huellas">Fase 2: Verificación Eléctrica y Asignación de Huellas</h2>
+<ol>
+<li><strong>Anotación de Componentes:</strong></li>
+<li>
+<p>Haz clic en el icono Annotate Schematic para asignar identificadores numéricos automáticos: R1, R2, C1, U1.</p>
+</li>
+<li>
+<p><strong>Electrical Rules Check - ERC:</strong></p>
+</li>
+<li>Corre el test ERC.</li>
+<li>
+<p>Solución a errores comunes:</p>
+<ul>
+<li>Pin connected to other pins but not driven by any pin: Añade la etiqueta PWR_FLAG a la línea de entrada de VCC y GND.</li>
+<li>Unconnected pin: Si un pin no se usará, márcalo explícitamente con la herramienta No Connect Flag.</li>
+</ul>
+</li>
+<li>
+<p><strong>Asignación de Footprints - Huellas Físicas:</strong></p>
+</li>
+<li>Abre el Footprint Assignment Tool.</li>
+<li>Asigna el encapsulado real a cada símbolo:<ul>
+<li>Componentes Through-Hole THD: Resistor_THT:R_Axial_DIN0207...</li>
+<li>Componentes Surface Mount SMD: Resistor_SMD:R_0805_2012Metric o R_0603_1608Metric.</li>
+</ul>
+</li>
+<li>Verificación doble: Confirma el pitch - espaciado de pines en mm - consultando la hoja de datos datasheet del fabricante.</li>
+</ol>
+<hr />
+<h2 id="fase-3-diseno-fisico-de-la-pcb-pcb-editor">Fase 3: Diseño Físico de la PCB - PCB Editor</h2>
+<ol>
+<li><strong>Importación desde el Esquemático:</strong></li>
+<li>Abre el editor de PCB y actualiza la PCB desde el esquemático.</li>
+<li>
+<p>Haz clic en Update PCB y coloca la red de componentes ratsnest en el área de trabajo.</p>
+</li>
+<li>
+<p><strong>Definición del Contorno de la Placa - Edge.Cuts:</strong></p>
+</li>
+<li>Selecciona la capa Edge.Cuts en el panel derecho.</li>
+<li>Dibuja el borde cerrado de la PCB usando las herramientas de línea o rectángulo.</li>
+<li>
+<p>Nota: El contorno debe ser una figura geométrica completamente cerrada sin líneas superpuestas.</p>
+</li>
+<li>
+<p><strong>Ubicación Estratégica de Componentes:</strong></p>
+</li>
+<li>Coloca los conectores como Micro-USB, Bornieres o Headers en los bordes de la placa.</li>
+<li>Coloca los capacitores de desacoplo inmediatamente al lado del pin de alimentación correspondiente del IC.</li>
+<li>Orienta los componentes para minimizar el cruce de líneas guía ratsnest.</li>
+</ol>
+<hr />
+<h2 id="fase-4-ruteo-y-planos-de-cobre">Fase 4: Ruteo y Planos de Cobre</h2>
+<ol>
+<li><strong>Reglas de Ancho de Pista - Traces:</strong></li>
+<li>Ve a File &gt; Board Setup &gt; Design Rules &gt; Net Classes.</li>
+<li>
+<p>Configura anchos según la corriente estimada:</p>
+<ul>
+<li>Señales digitales / de datos: 0.2 mm a 0.25 mm</li>
+<li>Alimentación VCC / GND: 0.5 mm a 1.0 mm o más si la corriente supera 1A.</li>
+</ul>
+</li>
+<li>
+<p><strong>Ruteo Manual:</strong></p>
+</li>
+<li>Inicia el trazado en la capa superior F.Cu color rojo o inferior B.Cu color verde.</li>
+<li>Regla de oro: Evita ángulos de 90°. Usa siempre cambios de dirección a 45° para reducir reflexiones de señal y prevenir trampas de ácido en la fabricación.</li>
+<li>
+<p>Para cambiar de capa durante el ruteo, inserta una Vía.</p>
+</li>
+<li>
+<p><strong>Plano de Masa - Filled Zone:</strong></p>
+</li>
+<li>Selecciona la herramienta Add Filled Zone.</li>
+<li>Elige la capa B.Cu y asígnala a la red GND.</li>
+<li>Dibuja un rectángulo envolviendo toda la placa.</li>
+<li>Rellena la zona de masa.</li>
+</ol>
+<hr />
+<h2 id="fase-5-drc-y-exportacion-de-archivos-de-fabricacion-gerber">Fase 5: DRC y Exportación de Archivos de Fabricación - Gerber</h2>
+<ol>
+<li><strong>Design Rules Check - DRC:</strong></li>
+<li>Ejecuta el DRC - Inspect &gt; Design Rules Checker.</li>
+<li>
+<p>Resuelve todos los errores y advertencias como untrack disconnects o clearance violations. Debe quedar en 0 Errores / 0 Advertencias.</p>
+</li>
+<li>
+<p><strong>Inspección Visual 3D:</strong></p>
+</li>
+<li>
+<p>Abre el visor 3D para verificar colisiones mecánicas, altura de componentes y serigrafía.</p>
+</li>
+<li>
+<p><strong>Exportación de Archivos Gerber:</strong></p>
+</li>
+<li>Ve a File &gt; Fabrication Outputs &gt; Gerbers .gbr</li>
+<li>Capas necesarias a incluir:<ul>
+<li>F.Cu - Cobre superior</li>
+<li>B.Cu - Cobre inferior</li>
+<li>F.Silkscreen - Serigrafía superior</li>
+<li>B.Silkscreen - Serigrafía inferior</li>
+<li>F.Mask - Máscara antisoldante superior</li>
+<li>B.Mask - Máscara antisoldante inferior</li>
+<li>Edge.Cuts - Contorno de la placa</li>
+</ul>
+</li>
+<li>Haz clic en Plot.</li>
+<li>Haz clic en Generate Drill Files... para exportar los taladros en formato Excel / NC Drill.</li>
+<li>Comprime todos los archivos .gbr y .drl generados en un único archivo .zip.</li>
+</ol>
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.code.copy", "content.tooltips"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
